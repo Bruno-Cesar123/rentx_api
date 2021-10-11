@@ -1,0 +1,17 @@
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+.idea/
+.vscode/
+node_modules/
+coverage
+build/
+temp/
+temp/*
+tmp/*
+.env
+ormconfig.json
+
+.env
+.DS_Store
