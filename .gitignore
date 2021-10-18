@@ -10,6 +10,8 @@ build/
 temp/
 temp/*
 tmp/*
+!tmp/.gitkeep
+!tmp/avatar/.gitkeep
 .env
 ormconfig.json
 
