@@ -12,6 +12,7 @@ temp/*
 tmp/*
 !tmp/.gitkeep
 !tmp/avatar/.gitkeep
+!tmp/cars/.gitkeep
 .env
 ormconfig.json
 
