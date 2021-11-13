@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import 'dotenv/config';
+import { errors } from 'celebrate';
 import cors from 'cors';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
@@ -28,6 +29,8 @@ app.use('/avatar', express.static(`${upload.tmpFolder}/avatar`));
 app.use('/avatar', express.static(`${upload.tmpFolder}/cars`));
 
 app.use(router);
+
+app.use(errors());
 
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
