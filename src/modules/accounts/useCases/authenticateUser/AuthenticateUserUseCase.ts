@@ -3,6 +3,7 @@ import { sign } from 'jsonwebtoken';
 import { inject, injectable } from 'tsyringe';
 
 import auth from '@config/auth';
+import { UserMap } from '@modules/accounts/mapper/UserMap';
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
 import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
@@ -75,10 +76,7 @@ class AuthenticateUserUseCase {
 
     const tokenReturn: IResponse = {
       token,
-      user: {
-        name: user.name,
-        email: user.email,
-      },
+      user: UserMap.toDTO(user),
       refresh_token,
     };
 
